@@ -153,7 +153,8 @@ function vitePluginManusDebugCollector(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
-  plugins,
+  plugins: [react()],
+  base: "/devsim-landing-v2--1-/",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
